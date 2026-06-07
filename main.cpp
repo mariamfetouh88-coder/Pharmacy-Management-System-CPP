@@ -34,7 +34,7 @@ void addMedicine(string medicineNames[], double medicinePrices[], int medicineQu
 
 void displayMedicines(string medicineNames[], double medicinePrices[], int medicineQuantities[]) {
     if (currentMedicineCount == 0) {
-        cout << " الصيدلية فارغة حالياً!\n";
+        cout << "Pharmacy is empty!\n";
         return;
     }
 
@@ -50,7 +50,7 @@ void displayMedicines(string medicineNames[], double medicinePrices[], int medic
 
 void searchMedicine(string medicineNames[], double medicinePrices[], int medicineQuantities[]) {
     if (currentMedicineCount == 0) {
-        cout << "⚠️ الصيدلية فارغة!\n";
+        cout << "Pharmacy is empty!\n";
         return;
     }
 
@@ -69,14 +69,14 @@ void searchMedicine(string medicineNames[], double medicinePrices[], int medicin
     }
 
     if (!found) {
-        cout << " هذا الدواء غير متوفر في الصيدلية.\n";
+        cout << " This medicine is not available in the pharmacy.\n";
     }
 }
 
 
 void sellMedicine(string medicineNames[], double medicinePrices[], int medicineQuantities[]) {
     if (currentMedicineCount == 0) {
-        cout << " الصيدلية فارغة، لا يوجد ما يمكن بيعه!\n";
+        cout << " The pharmacy is empty, there is nothing to sell !\n";
         return;
     }
 
@@ -98,14 +98,14 @@ void sellMedicine(string medicineNames[], double medicinePrices[], int medicineQ
                 cout << " Purchase completed successfully!\n";
             }
             else {
-                cout << " الكمية المتاحة لا تكفي، المتوفر فقط هو: " << medicineQuantities[i] << endl;
+                cout << "Insufficient quantity! Available stock is only: " << medicineQuantities[i] << endl;
             }
             break;
         }
     }
 
     if (!found) {
-        cout << " هذا الدواء غير متوفر لإتمام عملية البيع.\n";
+        cout << " This medicine is not available to complete the sale.\n";
     }
 }
 
